@@ -1,0 +1,149 @@
+{
+  "name": "PronWaliZoneBot",
+  "description": "A powerful Telegram bot to manage premium video subscriptions, daily limits, and auto-delete functionalities.",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram",
+    "mongodb",
+    "premium-bot",
+    "av-botz"
+  ],
+  "repository": "https://github.com/Botsthe/PronWaliZoneBot.git",
+  "logo": "https://files.catbox.moe/xg20ri.jpg",
+  "success_url": "https://t.me/PronWaliZoneBot",
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Get this value from @BotFather",
+      "required": true
+    },
+    "DATABASE_URI": {
+      "description": "MongoDB Connection String (from MongoDB Atlas)",
+      "required": true
+    },
+    "DATABASE_NAME": {
+      "description": "Name of your Database",
+      "value": "avbotz"
+    },
+    "ADMINS": {
+      "description": "User ID of the Admin (Space separated if multiple)",
+      "required": true
+    },
+    "OWNER_USERNAME": {
+      "description": "Username of the owner (without @)",
+      "value": "BOT_OWNER26"
+    },
+    "LOG_CHANNEL": {
+      "description": "Channel ID for General Logs (Start with -100)",
+      "required": true
+    },
+    "PREMIUM_LOGS": {
+      "description": "Channel ID for Payment Screenshots",
+      "required": false
+    },
+    "VERIFIED_LOG": {
+      "description": "Channel ID for Verification Logs",
+      "required": false
+    },
+    "POST_CHANNEL": {
+      "description": "Channel ID where bot posts videos",
+      "required": false
+    },
+    "VIDEO_CHANNEL": {
+      "description": "Source Channel ID for Normal Videos",
+      "required": false
+    },
+    "BRAZZER_CHANNEL": {
+      "description": "Source Channel ID for Premium Videos",
+      "required": false
+    },
+    "AUTH_CHANNEL": {
+      "description": "Channel ID for Force Subscribe",
+      "required": false
+    },
+    "FSUB": {
+      "description": "Enable Force Subscribe? (True/False)",
+      "value": "False"
+    },
+    "IS_VERIFY": {
+      "description": "Enable Verification System? (True/False)",
+      "value": "False"
+    },
+    "IS_SHORTLINK": {
+      "description": "Enable Shortlink for Free Users? (True/False)",
+      "value": "False"
+    },
+    "SEND_POST": {
+      "description": "Auto Post Videos to Channel? (True/False)",
+      "value": "False"
+    },
+    "DAILY_LIMIT": {
+      "description": "Daily File Limit for Free Users",
+      "value": "5"
+    },
+    "PREMIUM_DAILY_LIMIT": {
+      "description": "Daily File Limit for Premium Users",
+      "value": "50"
+    },
+    "SHORTLINK_URL": {
+      "description": "Shortener Domain (e.g., mdiskshortner.link)",
+      "required": false
+    },
+    "SHORTLINK_API": {
+      "description": "API Key of Shortener",
+      "required": false
+    },
+    "VERIFY_EXPIRE": {
+      "description": "Verification Expiry Time in Minutes",
+      "value": "60"
+    },
+    "TUTORIAL_LINK": {
+      "description": "Link to Tutorial Video",
+      "value": "https://t.me/"
+    },
+    "UPI_ID": {
+      "description": "Your UPI ID for Payments",
+      "required": false
+    },
+    "QR_CODE_IMAGE": {
+      "description": "Direct Link to QR Code Image",
+      "required": false
+    },
+    "START_PIC": {
+      "description": "Image for Start Message",
+      "value": "https://files.catbox.moe/xg20ri.jpg"
+    },
+    "AUTH_PICS": {
+      "description": "Image for Force Sub Message",
+      "value": "https://envs.sh/AwV.jpg"
+    },
+    "VERIFY_IMG": {
+      "description": "Image for Verification Message",
+      "value": "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg"
+    },
+    "NO_IMG": {
+      "description": "Fallback Image",
+      "value": "https://ibb.co/S7DFmfrs"
+    },
+    "TIMEZONE": {
+      "description": "Bot Timezone",
+      "value": "Asia/Kolkata"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
+
