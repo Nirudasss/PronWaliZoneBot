@@ -254,6 +254,7 @@ class Database:
         return stats.get("dataSize", 0)
 
     # ---------- VIDEOS SYSTEM ----------
+     # ✅ Ye Line Jaruri Hai (Duplicate)
     async def add_video(self, file_unique_id, file_id):
         exists = await self.videos.find_one({"file_unique_id": file_unique_id})
         if not exists:
@@ -264,6 +265,7 @@ class Database:
             })
             return True
         return False
+        
 
     async def total_videos(self):
         return await self.videos.count_documents({})
@@ -392,6 +394,8 @@ class Database:
                 "file_unique_id": file_unique_id,
                 "file_id": file_id
             })
+            return True  # ✅ Ye Line Jaruri Hai (New File)
+        return False
 
     # ✅ See Unseen Brazzers
     async def get_unseen_brazzers(self, user_id):
